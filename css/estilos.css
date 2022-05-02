@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.centro{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px 208px 50px 300px 60px;
+}
+header{
+    grid-column:  1 / span 3;
+    background-color: brown;
+}
+.seg{
+    grid-column:  1 / span 3;
+    background-color: rgb(231, 161, 69);
+}
+.ter{
+    grid-column:  1 / span 3;
+    background-color: rgb(124, 209, 248);
+}
+.izquierda{
+    background-color: rgb(0, 255, 76);
+}
+article{
+    background-color: rgb(217, 255, 0);
+}
+.derecha{
+    background-color: rgb(255, 102, 0);
+}
+footer{
+    grid-column:  1 / span 3;
+    background-color: rgb(28, 60, 245);
+}
+@media all and (max-width: 990px){
+    aside, article{
+        grid-column: 1 / span 3;
+    }
+    .centro{
+        grid-template-rows: repeat(7, 100px);
+
+    }
+}
+@media (max-width: 767px){
+    aside, article{
+        grid-column: 1 / span 3;
+    }
+    .centro{
+        grid-template-rows: repeat(7, 300px);
+
+    }
+}
